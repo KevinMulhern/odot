@@ -16,9 +16,11 @@
  @import 'modules/mixins';
  @import 'modules/helpers';
  @import 'partials/icons';
+ @import 'partials/header';
+ @import 'partials/lists';
  @import 'partials/todo_lists';
  @import 'partials/todo_items';
- @import 'partials/header';
+ 
 
 
 div.alert {
