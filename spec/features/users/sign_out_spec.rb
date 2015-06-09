@@ -7,7 +7,7 @@ describe "Logging Out" do
     expect(page).to have_content("Sign In")
     fill_in "Email", with: user.email
     fill_in "Password", with: "treehouse1"
-    click_button "Log In"
+    click_button "Sign In"
 
     expect(page).to have_content("Sign Out")
     click_link "Sign Out"
