@@ -14,7 +14,16 @@ class ApplicationController < ActionController::Base
   end
 
   def render_404
-    render file: 'public/404', status: :not_found, layout: false
+    respond_to do |format|
+      format.html do
+        render file: 'public/404', status: :not_found, layout: false
+      end
+      format.json do
+        render status: 404, json: {
+          message: "Not Found"
+        }
+      end
+    end
   end
 
   def render_error

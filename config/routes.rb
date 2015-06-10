@@ -1,4 +1,9 @@
 Odot::Application.routes.draw do
+  namespace :api do 
+    resources :todo_lists, only: [:index, :show, :create, :update, :destroy] do 
+      resources :todo_items, only: [:create, :update, :destroy]
+    end
+  end
   get 'pages/home'
 
   get "/login" => "user_sessions#new", as: :login
