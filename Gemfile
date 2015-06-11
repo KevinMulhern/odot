@@ -32,3 +32,7 @@ group :test do
   gem "capybara-email", "~> 2.2.0"
   gem 'shoulda-matchers', '~> 2.6.0'
 end
+
+group :production do
+	gem 'pg'
+end
